@@ -1,0 +1,21 @@
+name: Simple DevOps Pipeline
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get source code
+        uses: actions/checkout@v6
+
+      - name: Build
+        run: echo "Build successful"
+
+      - name: Test
+        run: |
+          echo "Test 1 passed"
+          echo "Test 2 passed"
+
+      - name: Feedback
+        run: echo "Pipeline completed"
