@@ -1,5 +1,6 @@
 variable "project_name" {
-  default = "my-devops-project"
+  type    = string
+  default = "devops-pipeline"
 }
 
 output "project_name" {
